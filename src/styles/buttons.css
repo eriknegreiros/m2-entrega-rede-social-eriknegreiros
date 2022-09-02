@@ -1,0 +1,22 @@
+.login_btn_page_on{
+    width: 65px;
+    height: 32px;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--grey-2);
+    font-family: var(--font);
+    color: var(--white);
+    text-align: center;
+    font-size: var(--size-1);
+    cursor: pointer;
+}
+
+.login_btn_page_off{
+    font-family: var(--font);
+    border: none;
+    background-color: var(--grey-1);
+    color: var(--white);
+    text-align: center;
+    font-size: var(--size-1);
+    cursor: pointer;
+}

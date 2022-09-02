@@ -1,12 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rede Social</title>
+    <link rel="stylesheet" href="./src/styles/components.css">
+    <link rel="stylesheet" href="./src/styles/index.css">
+    <link rel="stylesheet" href="./src/styles/buttons.css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>TechPosters</title>
 </head>
+
 <body>
-    
+
+    <header>
+        <div class="login_display">
+
+            <h1 class="login_title">TechPosters</h1>
+
+            <div class="login_display_btn">
+                <button class="login_btn_page_on">Login</button>
+                <button class="login_btn_page_off"><a class="a1" href="./src/pages/signUp.html">Registro</a> </button>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <form class="login_form">
+            <h2 class="login_title_form">Login</h2>
+
+            <div class="login_div_input_btn">
+
+                <input placeholder="Seu e-mail" class="login_input email" type="email">
+                <input placeholder="Sua senha" class="login_input password" type="password">
+
+                <button class="login_btn_logon">Logar</button>
+                <p class="login_text_for_register">Ainda não possui cadastro?</p>
+                <button class="login_btn_page_register"><a class="a2" href="./src/pages/signUp.html">Ir para página de registro</a></button>
+            </div>
+
+        </form>
+    </main>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="./src/scripts/models/login.js"></script>
+
 </body>
+
 </html>

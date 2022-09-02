@@ -1,0 +1,143 @@
+body {
+    background-color: var(--gray-5);
+}
+
+header {
+    background-color: var(--grey-1);
+    height: 74.76px;
+    position: fixed;
+    width: 100vw;
+}
+
+.a1{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.a2{
+    text-decoration: none;
+    color: var(--black);
+}
+
+.toast{
+    font-family: var(--font);
+    width: 80%;
+    height: 20px;
+    text-align: center;
+    color: var(--white);
+}
+
+.login_display {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 74.76px;
+}
+
+.login_title {
+    font-family: var(--font);
+    color: var(--white);
+    font-size: var(--size-2);
+    margin: 20px;
+}
+
+.login_display_btn {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_form {
+    background-color: var(--white);
+    width: 260px;
+    height: 306px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login_title_form {
+    margin: 20px 0px 0px 24px;
+    font-family: var(--font);
+    font-size: var(--size-4);
+    font-weight: 700;
+}
+
+.login_div_input_btn {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border-radius: 4px;
+}
+
+.login_input {
+    width: 225px;
+    height: 35px;
+    border: 1px solid var(--gray-4);
+    border-radius: 4px;
+}
+
+.login_btn_logon {
+    width: 225px;
+    height: 30px;
+    background-color: var(--brand-color);
+    border: none;
+    border-radius: 4px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.login_text_for_register {
+    font-family: var(--font);
+    text-align: center;
+    font-size: var(--size-0);
+    cursor: pointer;
+}
+
+
+.login_btn_page_register {
+    width: 225px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 4px;
+    background-color: var(--white);
+    font-family: var(--font);
+    font-size: var(--size-0);
+    cursor: pointer;
+}
+
+
+@media (min-width:768px) {
+    .login_title {
+        font-size: var(--size-3);
+    }
+
+    .login_form {
+        width: 400px;
+    }
+
+    .login_input {
+        width: 350px;
+    }
+
+    .login_btn_logon {
+        width: 350px;
+    }
+
+    .login_btn_page_register {
+        width: 350px;
+    }
+
+}

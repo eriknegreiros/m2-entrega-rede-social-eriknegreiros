@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>TechPosters
+    </title>
+</head>
+
+<body>
+
+    <header>
+        <div class="dashboard_display">
+            <h1 class="dashboard_title">TechPosters</h1>
+            <div class="dashboard_display_btn">
+                <button class="dashboard_btn">Sair</button>
+            </div>
+
+        </div>
+    </header>
+
+
+    <section class="dashboard_post">
+
+        <div class="dashboard_form_post">
+
+            <img class="dashboard_img" src="../assets/Design sem nome.png" alt="">
+
+            <div class="dashboard_name_work">
+                <h2 class="dashboard_username">Erik Negreiros</h2>
+                <p class="dashboard_work">Front end Enginner</p>
+            </div>
+            <p class="dashboard_follow">565 Seguidores</p>
+
+        </div>
+    </section>
+
+
+    
+    <section class="display_flex">
+        <form class="dashboard_textarea_display">
+            <textarea class="dashboard_textarea_titulo" placeholder="Digitar título do post"></textarea>
+            <textarea class="dashboard_textarea_conteudo" placeholder="Digitar descrição do post"></textarea>
+            <button class="dashboard_post_btn">Postar</button>
+        </form>
+
+
+        <div class="sugestoes_div">
+            <h2 class="sugestoes_text">Sugestões para seguir</h2>
+        </div>
+
+
+        <div class="dashboard_apoio_flex">
+
+            <div class="div_users_flex">
+                <img class="img_followers" src="../assets/Design sem nome.png" alt="">
+                <div class="bio_followers">
+                    <h3 class="name_of_username">Erik Negreiros</h3>
+                    <p class="name_of_work">Desenvolvedor Front-End</p>
+                    <button class="follow_btn">Seguir</button>
+                </div>
+            </div>
+
+            <div class="div_users_flex">
+                <img class="img_followers" src="../assets/Design sem nome.png" alt="">
+                <div class="bio_followers">
+                    <h3 class="name_of_username">Erik Negreiros</h3>
+                    <p class="name_of_work">Desenvolvedor Front-End</p>
+                    <button class="follow_btn">Seguir</button>
+                </div>
+            </div>
+
+            <div class="div_users_flex">
+                <img class="img_followers" src="../assets/Design sem nome.png" alt="">
+                <div class="bio_followers">
+                    <h3 class="name_of_username">Erik Negreiros</h3>
+                    <p class="name_of_work">Desenvolvedor Front-End</p>
+                    <button class="follow_btn ">Seguir</button>
+                    <button class="follow_btn2 none">Seguindo</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <main>
+        <section class="section_profile_user">
+            <h3 class="posts_title">Posts</h3>
+
+
+            
+            <div class="section_div_post">
+                <img class="main_img_post" src="../assets/Design sem nome.png" alt="">
+                <div class="div_post_bio">
+                    <h4 class="post_username">Erik da Silva Negreiros</h4>
+                    <p class="post_work">Desenvolvedor Front-End</p>
+                </div>
+            </div>
+
+            
+            <div class="div_text_post">
+                <h1 class="title_text_post">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </h1>
+                <p class="resume_post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo deserunt quod
+                    delectus, minima, numquam deleniti id debitis possimus alias doloremque sequi reiciendis optio cum
+                    veritatis voluptatem ducimus a dolorem molestias!</p>
+                <div class="div_open_post">
+                    <button class="open_post_btn">Abrir Post</button>
+                    <div class="like_post_div">
+                        <img class="heart_black " src="../assets/heartBlack.png" alt="">
+                        <img class="heart_red none" src="../assets/heartRed.png" alt="">
+                        <p class="amount_like">25</p>
+                    </div>
+                </div>
+            </div>
+         
+        </section>
+    </main>
+
+
+    <section class="modal_post none">
+        <div class="background_modal ">
+
+            <div class="div_modal">
+
+                <img class="img_modal" src="../assets/Design sem nome.png" alt="">
+
+                <button class="close_modal">X</button>
+                <div class="modal_bio_user">
+                    <h3 class="modal_name">Erik da Silva Negreiros</h3>
+                    <p class="modal_work">Front-End Enginner</p>
+                </div>
+            </div>
+
+            <div class="text_modal_div">
+
+                <h2 class="modal_title">Como criar um interface simples e agradável utilizando boas práticas de
+                    design</h2>
+
+                <p class="modal_text_resume">Hoje vamos conversar sobre como criar uma interface agradável mesmo
+                    sem ter um design pronto
+                    feito por um profissional de UI design.
+
+                    Antes de iniciar a criação de qualquer projeto, busque referências de aplicações que tenham
+                    a ver com o nicho que você está desenvolvendo. Por exemplo, quando quero criar um e-commerce
+                    de roupas, vou reservar um momento para buscar por aplicações do gênero, tanto acessando ou
+                    baixando apps e vendo o que se repete de informações em cada um dos aplicativos e sites
+                    referentes a compra de roupas, e também, observar cores que normalmente você enxerga em cada
+                    um dos apps.</p>
+
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+    <script type="module" src="../scripts/models/dashboard.js"></script>
+    
+
+</body>
+
+</html>

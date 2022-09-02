@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/signUp.css">
+    <link rel="stylesheet" href="../styles/buttons.css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>TechPosters</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="register_display">
+
+            <h1 class="register_title">TechPosters</h1>
+
+            <div class="register_display_btn">
+                <button class="login_btn_page_off"> <a class="a1" href="../../index.html   ">Login</a></button>
+                <button class="login_btn_page_on">Registro</button>
+            </div>
+
+        </div>
+    </header>
+
+
+
+
+
+    <main>
+        <form class="register_form">
+            <div class="register_back_div">
+                <h2 class="register_title_form">Cadastro</h2>
+                <button class="register_btn_back btn_back"> <a class="a2" href="../../index.html">Voltar</a></button>
+            </div>
+
+            <div class="register_div_input_btn">
+                <input placeholder="Seu nome" class="register_input name_reg" type="text">
+                
+                <input placeholder="Seu e-mail" class="register_input email_reg" type="email">
+                
+                <input placeholder="Sua senha" class="register_input password_reg " type="password">
+                
+                <input placeholder="Qual o seu trabalho?
+                " class="register_input work_reg" type="text">
+               
+                <input placeholder="URL da imagem de perfil
+                " class="register_input img_reg" type="text">
+
+
+
+
+                <button class="register_btn_logon">Registrar</button>
+                
+                <p class="register_text_for_register">Já possui login?</p>
+                <button  class="register_btn_page_register"><a class="a2" href="../../index.html">Ir para página de login </a></button>
+            </div>
+
+        </form>
+    </main>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="../scripts/models/createUser.js"></script>
+
+</body>
+
+</html>
