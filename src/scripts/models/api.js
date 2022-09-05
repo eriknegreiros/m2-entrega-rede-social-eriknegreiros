@@ -1,16 +1,19 @@
 import {
     instance,
-    instanceB
+    instanceB,
+    instanceC,
+    instanceD
 } from "./axios.js"
 import {
     Toast
 } from "./toastify.js"
 
 
-export class Request { 
+export class Request {
+
 
     static async userLogin(data) {
-        await instance
+        return await instance
             .post('/login/', data)
             .then((res) => {
                 localStorage.setItem('token', res.data.token)
@@ -18,7 +21,7 @@ export class Request {
                 Toast.create('Login Realizado com sucesso', "#364fbb")
                 setTimeout(() => {
                     window.location.replace("../../../src/pages/dashboard.html")
-                }, 3000)
+                }, 1000)
                 return res
             })
             .catch((err) => {
@@ -28,13 +31,13 @@ export class Request {
     }
 
     static async createUser(data) {
-        await instance
+        return await instance
             .post('/', data)
             .then((res) => {
                 Toast.create('Conta criada com sucesso', "#364fbb")
                 setTimeout(() => {
                     window.location.replace('../../index.html')
-                }, 3000)
+                }, 1000)
 
                 return res
 
@@ -46,27 +49,74 @@ export class Request {
     }
 
     static async renderPost(numPage) {
-        await instanceB
+        const base = await instanceB
             .get(`?page=${numPage}`)
-            .then(res => res)
+            .then(res => res.data.results.reverse())
             .catch(err => console.log(err))
+        return base
     }
 
-
-    static async createPostRequest(data){
-        await instanceB
-        .post(data)
-        .then(res => res)
-        .catch(err => console.log(err))
+    static async createPostRequest(data) {
+        const base = await instanceB
+            .post(``, data)
+            .then(res => res)
+            .catch(err => console.log(err))
+        return base
     }
 
     static async userById(id) {
-        await instance
+        const base = await instance
             .get(`/${id}/`)
             .then(res => res.data)
             .catch(err => err)
+        return base
+    }
+
+    static async allUsers(numPage) {
+        const base = await instance
+            .get(`/?page=${numPage}`)
+            .then((res) => {
+                return res.data.results
+
+            })
+            .catch(err => console.log(err))
+        return base
+    }
+
+    static async followUser(data) {
+        const base = await instanceC
+            .post(`follow/`, data)
+            .then((res) =>{
+                 console.log(res) 
+            })
+          
+            .catch(err => console.log(err))
+        return base
+    }
+
+    static async unfollowUser(id) {
+        const base = await instanceC
+            .delete(`unfollow/${id}/`)
+            .then(res => console.log('Deixou de seguir', res))
+            .catch(err => console.log(err))
+        return base
+    }
+
+    static async likes(data){
+        const base = await instanceD
+        .post(``, data)
+        .then(res => console.log(res,'like'))
+        .catch(err => console.log(err))
+        return base
+    }
+
+
+    static async unlike(id){
+        const base = await instanceD
+        .delete(`${id}`)
+        .then(res => console.log(res,'unlike'))
+        .catch(err => console.log(err))
+        return base
     }
 
 }
-
- 
