@@ -48,9 +48,9 @@ export class Request {
             })
     }
 
-    static async renderPost(numPage) {
+    static async renderPost() {
         const base = await instanceB
-            .get(`?page=${numPage}`)
+        .get('/?limit=10&offset=999')
             .then(res => res.data.results.reverse())
             .catch(err => console.log(err))
         return base
@@ -76,8 +76,7 @@ export class Request {
         const base = await instance
             .get(`/?page=${numPage}`)
             .then((res) => {
-                return res.data.results
-
+                return res.data.results.splice(0,3)
             })
             .catch(err => console.log(err))
         return base
@@ -86,10 +85,7 @@ export class Request {
     static async followUser(data) {
         const base = await instanceC
             .post(`follow/`, data)
-            .then((res) =>{
-                 console.log(res) 
-            })
-          
+            .then(res => res)
             .catch(err => console.log(err))
         return base
     }
@@ -97,7 +93,7 @@ export class Request {
     static async unfollowUser(id) {
         const base = await instanceC
             .delete(`unfollow/${id}/`)
-            .then(res => console.log('Deixou de seguir', res))
+            .then(res => res)
             .catch(err => console.log(err))
         return base
     }
@@ -105,7 +101,7 @@ export class Request {
     static async likes(data){
         const base = await instanceD
         .post(``, data)
-        .then(res => console.log(res,'like'))
+        .then(res => res)
         .catch(err => console.log(err))
         return base
     }
@@ -114,7 +110,7 @@ export class Request {
     static async unlike(id){
         const base = await instanceD
         .delete(`${id}`)
-        .then(res => console.log(res,'unlike'))
+        .then(res => res)
         .catch(err => console.log(err))
         return base
     }
