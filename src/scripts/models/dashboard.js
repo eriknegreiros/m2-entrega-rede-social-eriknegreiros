@@ -80,19 +80,19 @@ class Dashboard {
                 followBtn.classList.toggle('follow_btn2')
                 followBtn.classList.toggle('follow_btn')
 
-                if (followBtn.classList == 'follow_btn2') {
+                if (followBtn.classList.contains('follow_btn2')) {
                     followBtn.innerText = 'Seguindo'
                     const data = {
                         'following_users_uuid': element.uuid
                     }
-                    await Request.followUser(data)
-
+                   const res = await Request.followUser(data)
+                    followBtn.id = res.data.uuid
+                    console.log(res)
                 } else {
                     followBtn.innerText = 'Seguir'
-                    await Request.unfollowUser()
+                    await Request.unfollowUser(followBtn.id)
                 }
             })
-
 
             bioFollowers.append(nameOfUsername, nameOfWork, followBtn)
             divUsersFlex.append(imgFollowers, bioFollowers)
@@ -146,24 +146,34 @@ class Dashboard {
             resumePost.innerText = element.description
             heartBlack.src = "../../../src/assets/heartBlack.png"
 
+
+
             heartBlack.addEventListener('click', async (event) => {
                 event.preventDefault()
 
                 heartBlack.classList.toggle('none')
                 heartRed.classList.toggle('none')
 
-                if (hear.classList == 'none') {
-                    amountLike.innerText ++
+                if (heartBlack.classList.contains('none')) {
+                    amountLike.innerText++
                     const data = {
                         post_uuid: element.uuid
                     }
-                    var res = await Request.likes(data)
-                    console.log(await Request.likes(data))
-                } else{
-                    amountLike.innerText --
-                    await Request.unlike(res.id)
+                    const res = await Request.likes(data)
+                    console.log(res)
+                    heartRed.id = res.data.uuid
                 }
+            })
 
+            heartRed.addEventListener('click', async (event) => {
+                heartBlack.classList.toggle('none')
+                heartRed.classList.toggle('none')
+
+                event.preventDefault()
+                if (heartRed.classList.contains('none')) {
+                    amountLike.innerText--
+                    await Request.unlike(heartRed.id)
+                }
             })
 
 
@@ -267,7 +277,7 @@ class Dashboard {
 
 
 
-const page = await Request.renderPost(1)
+const page = await Request.renderPost()
 const user = await Request.userById(Dashboard.userId)
 const allUser = await Request.allUsers(1)
 
