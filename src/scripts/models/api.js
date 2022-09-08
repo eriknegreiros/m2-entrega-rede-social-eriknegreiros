@@ -25,7 +25,6 @@ export class Request {
                 return res
             })
             .catch((err) => {
-                Toast.create('Email ou senha invalidos', "#4263EB")
                 console.log(err)
             })
     }
@@ -48,7 +47,7 @@ export class Request {
             })
     }
 
-    static async renderPost() {
+    static async renderPost(numpage) {
         const base = await instanceB
         .get('')
             .then(res => res.data.results.reverse())

@@ -277,7 +277,7 @@ class Dashboard {
 
 
 
-const page = await Request.renderPost()
+const page = await Request.renderPost(1)
 const user = await Request.userById(Dashboard.userId)
 const allUser = await Request.allUsers(1)
 
