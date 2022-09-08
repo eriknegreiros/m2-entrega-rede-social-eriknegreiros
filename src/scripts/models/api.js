@@ -64,7 +64,7 @@ export class Request {
     }
 
     static async userById(id) {
-        const base = await instance
+        const base = await instanceC
             .get(`/${id}/`)
             .then(res => res.data)
             .catch(err => err)
@@ -72,7 +72,7 @@ export class Request {
     }
 
     static async allUsers(numPage) {
-        const base = await instance
+        const base = await instanceC
             .get(`/?page=${numPage}`)
             .then((res) => {
                 return res.data.results.splice(0,3)
