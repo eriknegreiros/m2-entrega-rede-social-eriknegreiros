@@ -14,7 +14,6 @@ export const instanceB = axios.create({
     headers: {
         'Content-Type': 'application/json',
         Authorization: `Token ${token}`,
-        Prefix: 'Token'
     }
 })
 
@@ -25,7 +24,6 @@ export const instanceC = axios.create({
     headers: {
         'Content-Type': 'application/json',
         Authorization: `Token ${token}`,
-        Prefix: 'Token'
     }
 })
 
@@ -35,6 +33,5 @@ export const instanceD = axios.create({
     headers: {
         'Content-Type': 'application/json',
         Authorization: `Token ${token}`,
-        Prefix: 'Token'
     }
 })
