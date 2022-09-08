@@ -50,7 +50,7 @@ export class Request {
 
     static async renderPost() {
         const base = await instanceB
-        .get('/?limit=10&offset=999')
+        .get('')
             .then(res => res.data.results.reverse())
             .catch(err => console.log(err))
         return base
