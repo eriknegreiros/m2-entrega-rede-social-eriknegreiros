@@ -144,7 +144,7 @@ class Dashboard {
             postWork.innerText = element.author.work_at
             titleTextPost.innerText = element.title
             resumePost.innerText = element.description
-            heartBlack.src = "../../../src/assets/heartBlack.png"
+            heartBlack.src = "../assets/heartBlack.png"
 
 
 
@@ -177,7 +177,7 @@ class Dashboard {
             })
 
 
-            heartRed.src = "../../../src/assets/heartRed.png"
+            heartRed.src = "../assets/heartRed.png"
             amountLike.innerText = element.likes.length
             openPostBtn.innerText = 'Abrir Post'
 
