@@ -50,7 +50,7 @@ export class Request {
     static async renderPost(numpage) {
         const base = await instanceB
         .get('')
-            .then(res => res.data.results)
+            .then(res => res.data.results.reverse())
             .catch(err => console.log(err))
         return base
     }
