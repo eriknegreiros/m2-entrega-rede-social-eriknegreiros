@@ -20,12 +20,11 @@ export class Request {
                 localStorage.setItem('user_uuid', res.data.user_uuid)
                 Toast.create('Login Realizado com sucesso', "#364fbb")
                 setTimeout(() => {
-                    window.location.replace("../../../src/pages/dashboard.html")
+                    window.location.replace("./src/pages/dashboard.html")
                 }, 1000)
                 return res
             })
             .catch((err) => {
-                Toast.create('Email ou senha invalidos', "#4263EB")
                 console.log(err)
             })
     }
@@ -48,10 +47,10 @@ export class Request {
             })
     }
 
-    static async renderPost() {
+    static async renderPost(numpage) {
         const base = await instanceB
-        .get('/?limit=10&offset=999')
-            .then(res => res.data.results.reverse())
+        .get('')
+            .then(res => res.data.results)
             .catch(err => console.log(err))
         return base
     }
