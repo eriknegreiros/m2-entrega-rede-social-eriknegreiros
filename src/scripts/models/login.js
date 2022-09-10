@@ -6,7 +6,7 @@ class Log {
 
     static dash() {
         if (localStorage.getItem('token')) {
-            window.location.replace('../../pages/dashboard.html')
+            window.location.replace('./src/pages/dashboard.html')
         }
     }
 
