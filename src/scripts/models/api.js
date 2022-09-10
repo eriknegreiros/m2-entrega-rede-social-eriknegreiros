@@ -20,7 +20,7 @@ export class Request {
                 localStorage.setItem('user_uuid', res.data.user_uuid)
                 Toast.create('Login Realizado com sucesso', "#00992E")
                 setTimeout(() => {
-                    window.location.replace("../../pages.dashbord.html")
+                    window.location.replace("./src/pages/dashboard.html")
                 }, 1000)
                 return res
             })
