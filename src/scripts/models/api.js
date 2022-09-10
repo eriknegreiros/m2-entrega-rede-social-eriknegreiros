@@ -20,7 +20,7 @@ export class Request {
                 localStorage.setItem('user_uuid', res.data.user_uuid)
                 Toast.create('Login Realizado com sucesso', "#00992E")
                 setTimeout(() => {
-                    window.location.replace("./src/pages/dashboard.html")
+                    window.location.replace("../../pages.dashbord.html")
                 }, 1000)
                 return res
             })
@@ -36,7 +36,7 @@ export class Request {
             .then((res) => {
                 Toast.create('Conta criada com sucesso', "#00992E")
                 setTimeout(() => {
-                    window.location.replace('../../index.html')
+                    window.location.replace('../../../index.html')
                 }, 1000)
 
                 return res
