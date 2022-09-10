@@ -1,6 +1,12 @@
 import { Request } from "./api.js"
 
 class Create {
+    static dash() {
+        if (localStorage.getItem('token')) {
+            window.location.replace('../../../src/pages/dashboard.html')
+        }
+    }
+    
     static createUser() {
         const nameReg = document.querySelector('.name_reg')
         const emailReg = document.querySelector('.email_reg')
@@ -23,6 +29,9 @@ class Create {
            await  Request.createUser(data)
         })
     }
+  
 }
 
+
+Create.dash()
 Create.createUser()
