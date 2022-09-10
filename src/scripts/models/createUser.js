@@ -3,7 +3,7 @@ import { Request } from "./api.js"
 class Create {
     static dash() {
         if (localStorage.getItem('token')) {
-            window.location.replace('../../pages/dashboard.html')
+            window.location.replace('./src/pages/dashboard.html')
         }
     }
     
