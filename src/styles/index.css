@@ -65,6 +65,25 @@ main {
     flex-direction: column;
 }
 
+.register_form {
+    margin-top: 70px;
+    background-color: var(--white);
+    width: 270px;
+    height: 80vh;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.register_back_div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
 .login_title_form {
     margin: 20px 0px 0px 24px;
     font-family: var(--font);
@@ -119,12 +138,30 @@ main {
 }
 
 
+.register_btn_back{
+    margin: 20px 24px 0px 0px;
+    background-color: var(--white);
+    font-family: var(--font);
+    font-size: var(--size-0);
+    border-radius: 2px;
+    border: 1px solid var(--black);
+    text-align: center;
+    height: 20px;
+    width: 60px;
+}
+
+
+
 @media (min-width:768px) {
     .login_title {
         font-size: var(--size-3);
     }
 
     .login_form {
+        width: 400px;
+    }
+
+    .register_form {
         width: 400px;
     }
 
@@ -138,6 +175,11 @@ main {
 
     .login_btn_page_register {
         width: 350px;
+    }
+
+    .toast{
+        width: 400px;
+        height: 20px;
     }
 
 }

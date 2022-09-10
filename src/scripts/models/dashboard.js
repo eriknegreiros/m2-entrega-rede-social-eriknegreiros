@@ -4,6 +4,11 @@ import {
 
 class Dashboard {
 
+    static dash() {
+        if (!localStorage.getItem('token')) {
+            window.location.replace('../../../index.html')
+        }
+    }
 
     static userId = localStorage.getItem('user_uuid')
 
@@ -49,7 +54,7 @@ class Dashboard {
         dashboardPost.append(dashbardFormPost)
     }
 
-    static suggestionToFollow(data) {
+    static  suggestionToFollow(data) {
         const dashboardApoioFlex = document.getElementById('dashboard_apoio_flex')
 
         const base = data.forEach((element) => {
@@ -73,6 +78,11 @@ class Dashboard {
             nameOfWork.innerText = element.work_at
             followBtn.innerText = 'Seguir'
 
+            
+
+
+
+
 
             followBtn.addEventListener('click', async (event) => {
                 event.preventDefault()
@@ -87,7 +97,6 @@ class Dashboard {
                     }
                    const res = await Request.followUser(data)
                     followBtn.id = res.data.uuid
-                    console.log(res)
                 } else {
                     followBtn.innerText = 'Seguir'
                     await Request.unfollowUser(followBtn.id)
@@ -281,6 +290,7 @@ const page = await Request.renderPost(1)
 const user = await Request.userById(Dashboard.userId)
 const allUser = await Request.allUsers(1)
 
+Dashboard.dash()
 Dashboard.logout()
 Dashboard.postPage(page)
 Dashboard.renderHeaderUser(user)

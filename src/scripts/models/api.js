@@ -18,13 +18,14 @@ export class Request {
             .then((res) => {
                 localStorage.setItem('token', res.data.token)
                 localStorage.setItem('user_uuid', res.data.user_uuid)
-                Toast.create('Login Realizado com sucesso', "#364fbb")
+                Toast.create('Login Realizado com sucesso', "#00992E")
                 setTimeout(() => {
                     window.location.replace("./src/pages/dashboard.html")
                 }, 1000)
                 return res
             })
             .catch((err) => {
+                Toast.create('Dados incorretos, Verifique os campos', '#D90A02')
                 console.log(err)
             })
     }
@@ -33,7 +34,7 @@ export class Request {
         return await instance
             .post('/', data)
             .then((res) => {
-                Toast.create('Conta criada com sucesso', "#364fbb")
+                Toast.create('Conta criada com sucesso', "#00992E")
                 setTimeout(() => {
                     window.location.replace('../../index.html')
                 }, 1000)
@@ -42,7 +43,7 @@ export class Request {
 
             })
             .catch((err) => {
-                Toast.create('Conta não criada, verifique os campos', "#4263EB")
+                Toast.create('Conta não criada, verifique os campos', "#D90A02")
                 console.log(err)
             })
     }
@@ -71,9 +72,9 @@ export class Request {
         return base
     }
 
-    static async allUsers(numPage) {
+    static async allUsers() {
         const base = await instanceC
-            .get(`/?page=${numPage}`)
+            .get(`?limit=250&offset=250/`)
             .then((res) => {
                 return res.data.results.splice(0,3)
             })

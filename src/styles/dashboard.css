@@ -168,7 +168,7 @@ header {
 #dashboard_apoio_flex {
     display: flex;
     flex-direction: row;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .div_users_flex {
@@ -378,7 +378,7 @@ header {
 
 .background_modal {
     background-color: var(--white);
-    width: 275px;
+    width: 95vw;
     min-height: 200px;
     overflow: scroll;
     animation: growDown 200ms ease-in-out ;
@@ -419,9 +419,8 @@ header {
 }
 
 .close_modal {
-    position: relative;
-    bottom: 20px;
-    left: 130px;
+    position: absolute;
+    right: 20px;
     border-radius: 50%;
     border: none;
     width: 30px;
@@ -435,7 +434,8 @@ header {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-left: -50px;
+    position: relative;
+   
 }
 
 
@@ -513,14 +513,16 @@ header {
     #dashboard_apoio_flex {
         display: flex;
         flex-direction: column;
-        margin-left: 63vw;
         position: fixed;
-
+        top: 150px;
+        right: 20px;
+        overflow: hidden;
+        
     }
 
     .sugestoes_div {
         position: absolute;
-        margin-left: 64vw;
+        margin-left: 67vw;
         top: 90px;
         position: fixed;
     }
@@ -547,13 +549,12 @@ header {
 
     .background_modal {
         background-color: var(--white);
-        width: 600px;
+        width: 50vw;
         min-height: 200px;
     }
 
     .close_modal {
-        position: relative;
-        left: 450px;
-        bottom: 10px;
+    position: absolute;
+      right: 26vw;
     }
 }
